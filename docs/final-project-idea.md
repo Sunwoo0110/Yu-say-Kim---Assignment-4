@@ -43,3 +43,28 @@
 - .vimrc 파일 설정을 통해 에디터 커스텀
 
 ---
+
+## Docker Container Auto Release to GitHub Package for Nodejs
+
+### 제출 형식
+- Github Action
+
+### 설명
+- Nodejs 프로젝트를 도커 컨테이너로 만들고, 해당 repo의 Github Package로 자동 배포하는 액션
+
+### 필요한 테크 스택
+- Docker container
+- Nodejs
+
+### 사용 깃허브 액션
+- Setup Node.js environment [actions/setup-node@v3](https://github.com/marketplace/actions/setup-node-js-environment)
+- Checkout [actions/checkout@v3](https://github.com/marketplace/actions/checkout)
+- Build and push Docker images [docker/build-push-action@v3](https://github.com/marketplace/actions/build-and-push-docker-images)
+
+### 개발 방향
+- Nodejs setup & docker image push는 위의 깃허브 액션을 사용해서 해결
+- docker container를 upload하고 Github repo의 Package로 release하는 부분을 추가로 개발
+
+---
+
+
