@@ -4,6 +4,7 @@ on:
    push:
       branches:
          - main
+         - 'Sunwoo0110-github-action'
 
 jobs:
    assignment_4:
@@ -25,8 +26,8 @@ jobs:
            with:
               script: |
                  github.rest.issues.createComment({
-                 issue_number: context.issue.number,
-                 owner: context.repo.owner,
-                 repo: context.repo.repo,
-                 body: '감사합니다'
-               })
+                    issue_number: context.issue.number,
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    body: '감사합니다'
+                  })
