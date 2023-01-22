@@ -15,7 +15,6 @@ jobs:
            uses: actions/checkout@v3
 
          - name: Print comment
-           uses: actions/github-script@v6
            run: |
               chmod -x ./src/PR_comment.js
               node src/PR_comment.js
