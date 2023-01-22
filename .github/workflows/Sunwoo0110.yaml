@@ -10,7 +10,7 @@ jobs:
    assignment_4:
       name: 4주차 과제
       runs-on: ubuntu-latest
-      steps: 
+      steps:               
          - name: 레포 체크아웃
            uses: actions/checkout@v3
 
@@ -20,6 +20,7 @@ jobs:
               cd scripts
               chmod +x hello.sh
               ./hello.sh
+
 
          - name: python 실행
            shell: python

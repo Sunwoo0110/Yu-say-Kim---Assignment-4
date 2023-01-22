@@ -1,0 +1,27 @@
+name: "jihoon's workflow"
+
+on:
+   pull_request:
+      types:
+         - opened
+
+
+jobs:
+   test-workflow:
+      runs-on: ubuntu-latest
+
+      steps:
+         - name: Checkout 
+           uses: actions/checkout@v3
+
+         - name: Print comment
+           run: |
+              chmod -x ./src/PR_comment.js
+              node src/PR_comment.js context.payload.sender.login
+
+         - name: Automerge
+           uses: "pascalgn/automerge-action@v0.15.5"
+           env:
+              GITHUB_TOKEN: "${{ secrets.SECRET_TOKEN }}"
+
+              
