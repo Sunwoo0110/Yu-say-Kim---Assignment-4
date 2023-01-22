@@ -1,25 +1,16 @@
 name: Sunwoo Github Action
 
 on:
-   issues:
-      types:
-   
+   push:
+      branches:
+         - main
+         - 'Sunwoo0110-github-action'
+
 jobs:
    assignment_4:
       name: 4주차 과제
       runs-on: ubuntu-latest
-      steps:
-         - name: issue 생성
-           uses: actions/github-script@v6
-           with:
-              script: |
-                 github.rest.issues.createComment({
-                    issue_number: context.issue.number,
-                    owner: context.repo.owner,
-                    repo: context.repo.repo,
-                    body: '감사합니다'
-                  }) 
-                  
+      steps:               
          - name: 레포 체크아웃
            uses: actions/checkout@v3
 
@@ -30,4 +21,9 @@ jobs:
               chmod +x hello.sh
               ./hello.sh
 
-         
+
+         - name: python 실행
+           shell: python
+           run: |
+              import os
+              print("파이썬 실행")
