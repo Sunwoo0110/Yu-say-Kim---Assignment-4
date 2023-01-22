@@ -24,3 +24,22 @@
 - server.js, app.js. routes 등의 파일 생성 및 기본 예시 코드 작성
 
 ---
+
+## Vim Editor Custom
+
+### 제출 형식
+- Github Action
+
+### 설명
+- 리눅스에서 자주 사용하는 vim 에디터의 커스텀을 도와주는 깃허브 액션
+
+### 필요한 테크 스택
+- shell scripting 에 대한 기본 지식
+- docker container
+
+### 개발 방향
+- vim editor 커스텀 방법과 종류 조사
+- options 로 syntax highlighting, auto indent 등의 기능 추가를 설정함
+- .vimrc 파일 설정을 통해 에디터 커스텀
+
+---
