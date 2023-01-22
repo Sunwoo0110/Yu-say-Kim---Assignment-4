@@ -21,13 +21,8 @@ jobs:
               chmod +x hello.sh
               ./hello.sh
 
-         - name: issue 생성
-           uses: actions/github-script@v6
-           with:
-              script: |
-                 github.rest.issues.createComment({
-                    issue_number: context.issue.number,
-                    owner: context.repo.owner,
-                    repo: context.repo.repo,
-                    body: '감사합니다'
-                  })
+         - name: python 실행
+           shell: python
+           run: |
+              import os
+              print("파이썬 실행")
