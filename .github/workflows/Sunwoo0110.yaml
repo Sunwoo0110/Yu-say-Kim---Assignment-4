@@ -1,10 +1,8 @@
 name: Sunwoo Github Action
 
 on:
-   push:
-      branches:
-         - main
-
+   issues:
+   
 jobs:
    assignment_4:
       name: 4주차 과제
