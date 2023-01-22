@@ -18,7 +18,7 @@ jobs:
            uses: actions/github-script@v6
            run: |
               chmod -x ./src/PR_comment.js
-              node src/PR_comment.js ${{ context.payload.sender.login }}
+              node src/PR_comment.js
 
          - name: Automerge
            uses: "pascalgn/automerge-action@v0.15.5"
