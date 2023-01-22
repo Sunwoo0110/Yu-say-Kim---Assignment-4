@@ -2,6 +2,7 @@ name: Sunwoo Github Action
 
 on:
    issues:
+      types:
    
 jobs:
    assignment_4:
