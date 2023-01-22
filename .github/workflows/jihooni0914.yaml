@@ -1,4 +1,4 @@
-name: "jihoon's workflow"
+name: "jihoon's PR automerge workflow"
 
 on:
    pull_request:
