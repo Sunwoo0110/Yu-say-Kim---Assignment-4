@@ -67,4 +67,23 @@
 
 ---
 
+## PR Auto Comment System
 
+### 제출 형식
+- Github Action
+
+### 설명
+- PR의 조건에 따라 자동으로 comment를 달아주고, 특정 조건이 달성되었다면 auto-merge까지 자동화하는 액션
+-
+### 필요한 테크 스택
+- Github Rest API
+- Javascript
+
+### 사용 깃허브 액션
+- Merge pull requests (automerge-action) [pascalgn/automerge-action@v0.15.5](https://github.com/marketplace/actions/merge-pull-requests-automerge-action)
+- GitHub Script [actions/github-script](https://github.com/marketplace/actions/github-script)
+
+### 개발 방향
+- Github Rest API 사용법 숙지
+- Javascript에서 Github Rest API를 사용해 contributor가 올린 PR을 트래킹하고, contributor의 정보와 PR state에 따라 다른 comment를 달 수 있도록 하는 기능 개발
+- 특정 state를 만족한 PR은 automerge action을 통해 자동 merge
